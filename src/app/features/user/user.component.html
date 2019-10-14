@@ -1,0 +1,5 @@
+<!-- <div class="text-justify" *ngFor="let blog of blogs" [appExcerpt]="wordLimit" fulltext="{{blog}}"></div> -->
+
+<div id="blog-wrapper" class="container" appLoadMore>
+    <div class="text-justify" *ngFor="let blog of blogs">{{blog}}"</div>
+</div>

@@ -10,6 +10,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ExcerptDirective } from './directives/excerpt.directive';
+import { LoadMoreDirective } from './directives/load-more.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    NavbarComponent
+    NavbarComponent,
+    ExcerptDirective,
+    LoadMoreDirective
   ],
   imports: [
     CommonModule,
@@ -35,7 +39,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MainLayoutComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    ExcerptDirective,
+    LoadMoreDirective
   ]
 })
 export class SharedModule { }
