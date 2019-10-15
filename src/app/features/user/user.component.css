@@ -1,9 +1,0 @@
-div.text-justify {
-    padding: 25px 0px;
-    border-bottom: 5px solid #505050;
-}
-
-div.container {
-    max-height: 750px;
-    overflow: auto;
-}
