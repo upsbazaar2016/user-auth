@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-9">
+        <h4 class="blog-title">{{ blog.title }} 
+            <a [routerLink]="['/main/blogs/edit-blog/' + blog.id]" routerLinkActive="router-link-active">Edit</a> 
+        </h4>
+        <p>By - {{ blog.author }}</p>
+        <div class="image">
+            <img class="img-fluid" src="{{blog.featureImage}}" />
+        </div>
+        <div [appExcerpt]="wordLimit" fulltext="{{blog.content}}"></div>
+        <ul>
+            <li>{{ blog.comments }} Response</li>
+            <li>{{ blog.upvotes }} Upvotes</li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <app-blog-sidebar></app-blog-sidebar>
+    </div>
+</div>
