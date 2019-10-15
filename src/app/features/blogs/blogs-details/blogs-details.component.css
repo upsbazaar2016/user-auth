@@ -1,3 +1,45 @@
 .blog-title ~ p {
     font-style: italic; 
 }
+h6.blog-comment {
+    padding: 10px 20px;
+    position: relative;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+h6.blog-comment::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    content: "";
+    bottom: 0;
+    border: 10px solid transparent;
+    border-bottom: 0;
+    border-top-color: var(--blue);
+    margin-bottom: -10px;
+}
+
+div.wrap > div:nth-child(2n + 1) h6.blog-comment::after {
+    border-right: 0;
+    right: 0;
+}
+
+div.wrap > div:nth-child(2n) h6.blog-comment {
+    border-radius: 5px 5px 5px 0px;
+}
+
+div.wrap > div:nth-child(2n) h6.blog-comment::after {
+    border-left: 0;
+    left: 0;
+}
+
+div.wrap > div:nth-child(2n + 1) h6.blog-comment {
+    border-radius: 5px 5px 0px 5px;
+}
+
+@media (min-width: 768px){
+    div.wrap > div.row > div.float-right {
+        margin-left: 50%;
+    }
+}
