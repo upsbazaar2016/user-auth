@@ -13,8 +13,12 @@ const routes: Routes = [
         loadChildren: './../user/user.module#UserModule'
       },
       {
+        path: 'blogs',
+        loadChildren: './../blogs/blogs.module#BlogsModule'
+      },
+      {
         path: '',
-        redirectTo: 'user',
+        redirectTo: 'blogs',
         pathMatch: 'full'
       }
     ]
