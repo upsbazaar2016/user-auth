@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    overflow: hidden;
+}
+
+p {
+    margin: 0px 0px;
+}
+
+main {
+    height: calc(100vh - 128px);
+    max-height: calc(100vh - 128px);
+    overflow: auto;
+}
+
+img {
+    width: 100%;
+}
