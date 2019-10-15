@@ -1,0 +1,8 @@
+<span>Number of Similar Blogs : {{ blogs.length }}</span>
+<div *ngFor="let blog of blogs" class="blog-item">
+    <a [routerLink]="['/main/blogs/' + blog.id ]" routerLinkActive="router-link-active">
+        <h6 class="blog-title">{{ blog.title }}</h6>
+    </a>
+    <p>By - {{ blog.author }}</p>
+    <div>{{blog.content.substring(0, wordLimit)}}...</div> 
+</div>
