@@ -19,12 +19,14 @@ export class ExcerptDirective implements OnInit{
   }
 
   addReadMoreLink() {
-    const anchorTag = document.createElement('a');
-    anchorTag.setAttribute('load-more', 'load-more');
-    anchorTag.style.setProperty('cursor', 'pointer');
-    anchorTag.style.setProperty('color', '#f82045');
-    anchorTag.innerText = ' (read more...)';
-    this.element.nativeElement.appendChild(anchorTag);
+    if (this.element.nativeElement.innerText.length > this.appExcerpt) {
+      const anchorTag = document.createElement('a');
+      anchorTag.setAttribute('load-more', 'load-more');
+      anchorTag.style.setProperty('cursor', 'pointer');
+      anchorTag.style.setProperty('color', '#f82045');
+      anchorTag.innerText = ' (read more...)';
+      this.element.nativeElement.appendChild(anchorTag);
+    }
   }
 
   @HostListener('click', ['$event.target']) onClick(target) {
