@@ -1,0 +1,9 @@
+<div id="blog-wrapper" class="container" [appLoadMore]="config" (loadMore)="getBlogs($event)">
+    <ng-container *ngFor="let blog of blogs; let i = index;">
+        <div class="text-justify">
+            <h4><a [routerLink]="['/main/blogs/' + blog.id]" routerLinkActive="router-link-active">{{blog.title + ' ' + (i + 1)}}</a></h4>
+            <img class="img-fluid" src="{{blog.featureImage}}" />
+            <div [appExcerpt]="wordLimit" fulltext="{{blog.content}}"></div>
+        </div>
+    </ng-container>    
+</div>
