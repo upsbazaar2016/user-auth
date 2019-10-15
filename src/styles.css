@@ -16,3 +16,7 @@ main {
 img {
     width: 100%;
 }
+
+img.img-fluid {
+    padding: 20px 0px;
+}

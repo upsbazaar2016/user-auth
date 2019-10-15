@@ -9,7 +9,7 @@ const routes: Routes = [
     component: MainLayoutComponent,
     children: [
       {
-        path: 'user',
+        path: 'users',
         loadChildren: './../user/user.module#UserModule'
       },
       {
