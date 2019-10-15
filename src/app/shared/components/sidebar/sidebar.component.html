@@ -1,1 +1,35 @@
-<p>sidebar works!</p>
+<nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Sidebar</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <!-- <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Home 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 3</a>
+                    </li>
+                </ul>
+            </li> -->
+            <li>
+                <a [routerLink]="['/main/blogs']" routerLinkActive="router-link-active" >Blogs</a>
+            </li>
+            <li>
+                <a [routerLink]="['/main/blogs/new-blog']" routerLinkActive="router-link-active" >Write a Blog</a>
+            </li>
+            <li>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
