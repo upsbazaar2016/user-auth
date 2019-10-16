@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-6">
+        <h4 class="page-heading">Leave Application Form</h4>
+        <form [formGroup]="leaveForm" (submit)="submitLeave()">
+            <div class="form-group">
+                <label for="fromDate">From</label>
+                <div class="clearfix">
+                    <input id="fromDate" type="date" class="form-control" [ngClass]="{'transparent-text': (leaveForm.value.fromDate === '' || leaveForm.value.fromDate === null) }" (input)="updateDate()" formControlName="fromDate" placeholder="Enter From Date" [min]="getCurrentDate()"  value="" />
+                    <label for="fromDate" *ngIf="(leaveForm.value.fromDate === '' || leaveForm.value.fromDate === null)">Enter From Date</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="toDate">To</label>
+                <div class="clearfix">
+                    <input [readonly]="(leaveForm.value.fromDate === '' || leaveForm.value.fromDate === null)" id="toDate" type="date" class="form-control" [ngClass]="{'transparent-text': (leaveForm.value.toDate === '' || leaveForm.value.toDate === null) }" formControlName="toDate" [min]="leaveForm.value.fromDate"  placeholder="Enter To Date" value="" />
+                    <label [for]="(leaveForm.value.fromDate === '' || leaveForm.value.fromDate === null) ? 'fromDate' : 'toDate'" *ngIf="(leaveForm.value.toDate === '' || leaveForm.value.toDate === null)">Enter To Date</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input [disabled]="leaveForm.invalid" class="btn btn-primary" type="submit" value="SUBMIT" />
+            </div>
+        </form>
+    </div>    
+</div>
