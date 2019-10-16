@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ExcerptDirective } from './directives/excerpt.directive';
 import { LoadMoreDirective } from './directives/load-more.directive';
+import { MentorshipTreeDirective } from './directives/mentorship-tree.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LoadMoreDirective } from './directives/load-more.directive';
     SidebarComponent,
     NavbarComponent,
     ExcerptDirective,
-    LoadMoreDirective
+    LoadMoreDirective,
+    MentorshipTreeDirective
   ],
   imports: [
     CommonModule,
@@ -41,7 +43,8 @@ import { LoadMoreDirective } from './directives/load-more.directive';
     FooterComponent,
     SidebarComponent,
     ExcerptDirective,
-    LoadMoreDirective
+    LoadMoreDirective,
+    MentorshipTreeDirective
   ]
 })
 export class SharedModule { }
