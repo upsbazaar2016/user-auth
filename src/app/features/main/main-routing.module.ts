@@ -18,7 +18,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'blogs',
+        redirectTo: 'users',
         pathMatch: 'full'
       }
     ]
