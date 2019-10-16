@@ -6,7 +6,26 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    component: UserComponent
+    component: UserComponent,
+    children: [
+      {
+        path: 'details',
+        loadChildren: './details/details.module#DetailsModule'
+      },
+      {
+        path: 'leaves',
+        loadChildren: './leaves/leaves.module#LeavesModule'
+      },
+      {
+        path: 'projects',
+        loadChildren: './projects/projects.module#ProjectsModule'
+      },
+      {
+        path: '**',
+        redirectTo: 'leaves',
+        pathMatch: 'full'
+      }
+    ]
   }
 ];
 

@@ -1,3 +1,4 @@
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  constructor() {}
+  leaveForm: FormGroup;
+  fromType: string;
+  toType: string;
+  
+  constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.fromType = 'text';
+    this.toType = 'text';
+    this.leaveForm = this.formBuilder.group({
+      fromDate: ['', Validators.required],
+      toDate: ['', Validators.required],
+    });
+  }
+
+  getCurrentDate(minDate?: string): string {
+      const date = new Date();
+      return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`; 
+  }
+
+  updateDate() {
+    this.leaveForm.patchValue({
+      toDate: ''
+    });
+  }
+
+  submitLeave() {
+    console.log(this.leaveForm.value);
+    this.leaveForm.reset();
+  }
 }
