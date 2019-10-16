@@ -22,7 +22,7 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'details',
+        redirectTo: 'projects',
         pathMatch: 'full'
       }
     ]

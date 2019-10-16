@@ -13,6 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ExcerptDirective } from './directives/excerpt.directive';
 import { LoadMoreDirective } from './directives/load-more.directive';
 import { MentorshipTreeDirective } from './directives/mentorship-tree.directive';
+import { ProgressGraphComponent } from './components/progress-graph/progress-graph.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MentorshipTreeDirective } from './directives/mentorship-tree.directive'
     NavbarComponent,
     ExcerptDirective,
     LoadMoreDirective,
-    MentorshipTreeDirective
+    MentorshipTreeDirective,
+    ProgressGraphComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +46,8 @@ import { MentorshipTreeDirective } from './directives/mentorship-tree.directive'
     SidebarComponent,
     ExcerptDirective,
     LoadMoreDirective,
-    MentorshipTreeDirective
+    MentorshipTreeDirective,
+    ProgressGraphComponent
   ]
 })
 export class SharedModule { }
